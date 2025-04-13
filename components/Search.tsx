@@ -5,9 +5,10 @@ import { Website } from '@/types';
 
 interface SearchProps {
   onSearch: (query: string) => void;
+  totalWebsites?: number;
 }
 
-export default function Search({ onSearch }: SearchProps) {
+export default function Search({ onSearch, totalWebsites }: SearchProps) {
   const [query, setQuery] = useState('');
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,6 +30,11 @@ export default function Search({ onSearch }: SearchProps) {
         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">
           🔍
         </span>
+        {totalWebsites !== undefined && (
+          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">
+            {totalWebsites} websites
+          </span>
+        )}
       </div>
     </div>
   );
