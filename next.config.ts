@@ -1,6 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
@@ -9,6 +8,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // 添加Cloudflare Pages所需的配置
+  output: 'standalone',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
