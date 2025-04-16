@@ -24,6 +24,8 @@ const nextConfig = {
     optimizeCss: true, // 优化CSS
     optimizePackageImports: ['@heroicons/react'], // 优化特定包的导入
   },
+  // 如果你使用了自定义域名，需要添加
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/' : ''
 };
 
 module.exports = nextConfig;
