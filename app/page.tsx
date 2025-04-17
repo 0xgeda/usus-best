@@ -1,14 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { supabase } from '@/lib/supabase';
-import Navbar from '@/components/Navbar';
-import CategoryList from '@/components/CategoryList';
-import Search from '@/components/Search';
-import BackToTop from '@/components/BackToTop';
-import CategoryTags from '@/components/CategoryTags';
-import Loading from '@/components/Loading';
-import { Category, Website } from '@/types';
+import { supabase } from '../lib/supabase';
+import Navbar from '../components/Navbar';
+import CategoryList from '../components/CategoryList';
+import Search from '../components/Search';
+import BackToTop from '../components/BackToTop';
+import CategoryTags from '../components/CategoryTags';
+import Loading from '../components/Loading';
+import { Category, Website } from '../types';
 
 export default function Home() {
   const [categories, setCategories] = useState<Category[]>([]);
